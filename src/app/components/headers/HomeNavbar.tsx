@@ -1,11 +1,12 @@
 import { Box, Button, Container, Stack } from "@mui/material"
 import { NavLink } from "react-router-dom";
+import Basket from "./Basket";
 
-export function HomeNavbar() {
+export default function HomeNavbar() {
     const authMember = null;
 
     return (
-        /** HOME-NAVBAR */
+        /** STARING => HOME-NAVBAR */
         <div className="home-navbar">
             <Container className="navbar-container">
                 <Stack className="menu">
@@ -46,6 +47,7 @@ export function HomeNavbar() {
                         </Box>
 
                         {/* BASKET */}
+                        <Basket />
 
                         {!authMember ? (
                             <Box>
@@ -62,7 +64,7 @@ export function HomeNavbar() {
                         )}
                     </Stack>
                 </Stack>
-                {/* HOME-NAVBAR => STOPING */}
+                {/* STOPING => HOME-NAVBAR  */}
                 {/* HEADER */}
                 <Stack className={"header-frame"}>
                     <Stack className={"detail"}>
@@ -87,7 +89,7 @@ export function HomeNavbar() {
                         <div className={"logo-img"}></div>
                     </Box>
                 </Stack>
-                {/* HEADER => STOPING */}
+                {/* STOPING => HEADER */}
             </Container>
         </div>
     );
