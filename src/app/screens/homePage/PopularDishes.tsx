@@ -23,25 +23,17 @@ export default function PopularDishes() {
                 <Stack className="popular-section">
                     <Box className="category-title">Popular Dishes</Box>
                     <Stack className="cards-frame">
-                        {list.map((ele, index) => {
-                            return (
+                        {list.length !== 0 ? (
+                            list.map((ele, index) => (
                                 <CssVarsProvider key={index}>
-                                    <Card className={"card"}>
+                                    <Card className="card">
                                         <CardCover>
                                             <img src={ele.imagePath} alt="" />
                                         </CardCover>
-                                        <CardCover className={"card-cover"} />
+                                        <CardCover className="card-cover" />
                                         <CardContent sx={{ justifyContent: "flex-end" }}>
-                                            <Stack 
-                                            flexDirection={"row"}
-                                            justifyContent={"space-between"}
-                                            >
-                                                <Typography 
-                                                    level="h2"
-                                                    fontSize="lg"
-                                                    textColor="#fff"
-                                                    mb={1}
-                                                >
+                                            <Stack flexDirection="row" justifyContent="space-between">
+                                                <Typography level="h2" fontSize="lg" textColor="#fff" mb={1}>
                                                     {ele.productName}
                                                 </Typography>
                                                 <Typography
@@ -53,9 +45,7 @@ export default function PopularDishes() {
                                                     }}
                                                 >
                                                     20
-                                                    <VisibilityIcon
-                                                        sx={{ fontSize: 25, marginLeft: "5px"}} 
-                                                    />
+                                                    <VisibilityIcon sx={{ fontSize: 25, marginLeft: "5px" }} />
                                                 </Typography>
                                             </Stack>
                                         </CardContent>
@@ -78,9 +68,10 @@ export default function PopularDishes() {
                                         </CardOverflow>
                                     </Card>
                                 </CssVarsProvider>
-                            );
-                        })}
-
+                            ))
+                        ) : (
+                            <Typography>No popular dishes available</Typography>
+                        )}
                     </Stack>
                 </Stack>
             </Container>
