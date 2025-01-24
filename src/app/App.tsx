@@ -11,7 +11,8 @@ import Footer from "./components/footer";
 import "../css/app.css";
 import "../css/navbar.css";
 import "../css/footer.css";
-import HelpPage from "./screens/helpPage/index copy";
+import HelpPage from "./screens/helpPage/index";
+
 
 function App() {
   const location = useLocation();
