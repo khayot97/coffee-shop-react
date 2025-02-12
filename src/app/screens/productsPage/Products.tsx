@@ -58,7 +58,6 @@ export default function Products() {
 
 
 /** HANDLERS */
-
 const searchCollectionHandler = (collection: ProductCollection) => {
     productSearch.page = 1;
     productSearch.productCollection = collection;
