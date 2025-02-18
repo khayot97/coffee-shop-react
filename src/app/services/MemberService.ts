@@ -1,7 +1,7 @@
 import axios from "axios";
 import { serverApi } from "../../lib/config";
 import { Product, ProductInquiry } from "../../lib/types/product";
-import { Member } from "../../lib/types/member";
+import { Member, MemberInput } from "../../lib/types/member";
 
 class MemberService {
     private readonly path: string;
@@ -23,7 +23,6 @@ class MemberService {
         }
     }
 
-    
     public async getRestaurant(): Promise<Member> {
         try {
         const url = this.path + "/member/restaurant";
@@ -37,6 +36,24 @@ class MemberService {
             throw err;
         }
     }
+
+    public async signup(input: MemberInput): Promise<Member> {
+        try {
+        const url = this.path + "/member/signup",
+            result = await axios.post(url, input, { withCredentials: true });
+        console.log("signup:", result);
+        
+        const member: Member = result.data.member;
+        console.log("member:", member);
+        localStorage.setItem("memberData", JSON.stringify(member));
+        return member;
+        } catch(err) {
+            console.log("Error, getRestaurant:", err);
+            throw err;
+        }
+    }
+
+
 
 }
 

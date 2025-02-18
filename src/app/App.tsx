@@ -35,6 +35,8 @@ function App() {
           onRemove = {onRemove}
           onDelete = {onDelete}
           onDeleteAll = {onDeleteAll}
+          setSignupOpen={setSignupOpen}
+          setLoginOpen={setLoginOpen}
         />
       ) : (
         <OtherNavbar 
@@ -43,6 +45,8 @@ function App() {
           onRemove = {onRemove}
           onDelete = {onDelete}
           onDeleteAll = {onDeleteAll}
+          setSignupOpen={setSignupOpen}
+          setLoginOpen={setLoginOpen}
         />
       )}
       <Switch>
@@ -74,8 +78,3 @@ function App() {
 }
 
 export default App;
-
-
-// function useBasket(): { cartItems: any; onAdd: any; } {
-//   throw new Error("Function not implemented.");
-// }
