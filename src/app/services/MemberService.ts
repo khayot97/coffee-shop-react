@@ -1,7 +1,7 @@
 import axios from "axios";
 import { serverApi } from "../../lib/config";
 import { Product, ProductInquiry } from "../../lib/types/product";
-import { Member, MemberInput } from "../../lib/types/member";
+import { LoginInput, Member, MemberInput } from "../../lib/types/member";
 
 class MemberService {
     private readonly path: string;
@@ -15,7 +15,6 @@ class MemberService {
         const url = this.path + "/member/top-users";
         const result = await axios.get(url);
         console.log("getProducts:", result);
-
         return result.data;
         } catch(err) {
             console.log("Error, getTopUsres:", err);
@@ -28,7 +27,6 @@ class MemberService {
         const url = this.path + "/member/restaurant";
         const result = await axios.get(url);
         console.log("getResaturant:", result);
-        
         const restaurant: Member = result.data;
         return restaurant;
         } catch(err) {
@@ -42,18 +40,30 @@ class MemberService {
         const url = this.path + "/member/signup",
             result = await axios.post(url, input, { withCredentials: true });
         console.log("signup:", result);
-        
         const member: Member = result.data.member;
         console.log("member:", member);
         localStorage.setItem("memberData", JSON.stringify(member));
         return member;
         } catch(err) {
-            console.log("Error, getRestaurant:", err);
+            console.log("Error, signup:", err);
             throw err;
         }
     }
 
-
+    public async login(input: LoginInput): Promise<Member> {
+        try {
+        const url = this.path + "/member/login",
+            result = await axios.post(url, input, { withCredentials: true });
+        console.log("login:", result);
+        const member: Member = result.data.member;
+        console.log("member:", member);
+        localStorage.setItem("memberData", JSON.stringify(member));
+        return member;
+        } catch(err) {
+            console.log("Error, login:", err);
+            throw err;
+        }
+    }
 
 }
 
