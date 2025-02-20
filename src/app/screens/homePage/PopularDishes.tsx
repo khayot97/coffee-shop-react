@@ -8,20 +8,17 @@ import { CssVarsProvider } from "@mui/joy/styles";
 import CardOverflow from '@mui/joy/CardOverflow';
 import VisibilityIcon  from '@mui/icons-material/Visibility'
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined"
-
 import { useSelector } from "react-redux";
 import { createSelector } from "reselect";
 import { retrievePopularDishes} from "./selector";
 import { Product } from "../../../lib/types/product";
 import { serverApi } from "../../../lib/config";
 
-
 /** REDUX SLICE & SELECTOR **/  
   const popularDishesRetriever = createSelector(
     retrievePopularDishes,
     (popularDishes) => ({ popularDishes })
   );
-
 
 export default function PopularDishes() {
      const { popularDishes } = useSelector(popularDishesRetriever);

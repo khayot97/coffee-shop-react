@@ -28,7 +28,6 @@ const productsRetriver = createSelector(retrieveProduct, (products) => ({
     products,
 }));
 
-
 interface ProductsProps {
   onAdd: (item: CartItem) => void;
 }

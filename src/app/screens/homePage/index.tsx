@@ -16,7 +16,6 @@ import { Member } from "../../../lib/types/member";
 import "../../../css/home.css";
 
 /** REDUX SLICE & SELECTOR **/
-
 const actionDispatch = (dispatch: Dispatch) => ({
   setPopularDishes: (data: Product[]) => dispatch(setPopularDishes(data)),
   setNewDishes: (data: Product[]) => dispatch(setNewDishes(data)),
