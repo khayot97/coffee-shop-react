@@ -3,7 +3,7 @@ import { OrderStatus } from "../enums/order.enum";
 import { Product } from "./product";
 
 export interface OrderItemInput {
-    itemQuantitiy: number;
+    itemQuantity: number;
     itemPrice: number;
     productId: string;
     orderId?: string;
@@ -11,7 +11,7 @@ export interface OrderItemInput {
 
 export interface OrderItem {
     _id: string;
-    itemQuantitiy: number;
+    itemQuantity: number;
     itemPrice: number;
     orderId: string;
     productId: string;
@@ -34,7 +34,6 @@ export interface Order {
 
 export interface OrderItemInput {
     itemQuantity: number;
-    itemQuantitiy: number;
     itemPrice: number;
     productId: string;
     orderId?: string;

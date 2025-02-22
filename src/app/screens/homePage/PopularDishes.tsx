@@ -15,10 +15,10 @@ import { Product } from "../../../lib/types/product";
 import { serverApi } from "../../../lib/config";
 
 /** REDUX SLICE & SELECTOR **/  
-  const popularDishesRetriever = createSelector(
-    retrievePopularDishes,
-    (popularDishes) => ({ popularDishes })
-  );
+const popularDishesRetriever = createSelector(
+retrievePopularDishes,
+(popularDishes) => ({ popularDishes })
+);
 
 export default function PopularDishes() {
      const { popularDishes } = useSelector(popularDishesRetriever);
