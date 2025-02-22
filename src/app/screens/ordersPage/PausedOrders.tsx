@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Stack } from "@mui/material";
 import Button from "@mui/material/Button";
 import TabPanel from "@mui/lab/TabPanel";
-
 import { useSelector } from "react-redux";
 import { createSelector } from "reselect";
 import { retrievePausedOrders } from "./selector";
@@ -16,7 +15,7 @@ retrievePausedOrders,
 (pausedOrders) => ({ pausedOrders })
 );
 
-
+/** HAnDLERS */
 export default function PausedOrders() {
   const  { pausedOrders } = useSelector(pausedOrdersRetriever);
 
@@ -42,9 +41,9 @@ export default function PausedOrders() {
                         <p className={"title-dish"}>{product.productName}</p>
                         <Box className={"price-box"}>
                           <p>${item.itemPrice}</p>
-                          <img src={"/icons/close.svg"} alt="" />
+                          <img src={"/icons/close.svg"} />
                           <p>{item.itemQuantity}</p>
-                          <img src={"/icons/pause.svg"} alt="" />
+                          <img src={"/icons/pause.svg"} />
                           <p style={{ marginLeft: "15px" }}>
                             ${item.itemQuantity * item.itemPrice} 
                           </p>
