@@ -62,7 +62,7 @@ export default function HomeNavbar(props: HomeNavbarProps) {
                         </Box>
                         {authMember ? (
                             <Box className={"hover-line"}>
-                                <NavLink to="/orderss" activeClassName={"underline"}>
+                                <NavLink to="/orders" activeClassName={"underline"}>
                                     Orders
                                 </NavLink>
                             </Box>
