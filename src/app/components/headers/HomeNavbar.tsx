@@ -79,7 +79,6 @@ export default function HomeNavbar(props: HomeNavbarProps) {
                                 Help
                             </NavLink>
                         </Box>
-
                         {/* BASKET */}
                         <Basket cartItems={cartItems} 
                             onAdd = {onAdd}
@@ -158,10 +157,12 @@ export default function HomeNavbar(props: HomeNavbarProps) {
                 <Stack className={"header-frame"}>
                     <Stack className={"detail"}>
                         <Box className={"head-main-txt"}>
-                            World's Most Delicious Cousine
+                            <div className="line1">FRESH IN THE</div>
+                            <div className="line2">MORNING</div>
                         </Box>
                         <Box className={"wel-txt"}>
-                            The Choice, not just a choice
+                            Lorem. Ipsum Dolor Sit Amet Excepturi Eius Magni. Accusantium
+                            Nobis Odio, Laborum assumenda Reprehnederit Ipsa!
                         </Box>
                         <Box className={"service-txt"}>24 hours service
                         </Box>
@@ -176,9 +177,6 @@ export default function HomeNavbar(props: HomeNavbarProps) {
                             ) : null}
                         </Box>
                     </Stack>
-                    <Box className={"logo-frame"}>
-                        <div className={"logo-img"}></div>
-                    </Box>
                 </Stack>
                 {/* STOPING => HEADER */}
             </Container>
