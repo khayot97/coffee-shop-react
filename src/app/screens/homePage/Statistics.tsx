@@ -6,7 +6,7 @@ export default function Statistic() {
     <div className="about">
       <Container>
         <h1 className="heading">
-        <span>about</span> <span className="highlight">us</span>
+        <span>about</span> <span className="heading-about">us</span>
         </h1>
         <div className="about-row">
           <div className="image">
@@ -15,9 +15,10 @@ export default function Statistic() {
           <div className="content">
             <h3>What Makes Our Coffee Special?</h3>
             <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos a autem fugit iusto
-            blanditiis magni voluptatibus esse reprehenderit quasi voluptates illum officiis 
-            officiis quod natus temporibus. Aliquid magni nihil neque!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos a autem 
+            fugit iusto blanditiis magni voluptatibus esse reprehenderit quasi
+            voluptates illum officiis officiis quod natus temporibus. 
+            Aliquid magni nihil neque!
             </p>
             <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt veritatis reiciendis 

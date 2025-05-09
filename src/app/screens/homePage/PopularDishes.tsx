@@ -21,15 +21,15 @@ retrievePopularDishes,
 );
 
 export default function PopularDishes() {
-     const { popularDishes } = useSelector(popularDishesRetriever);
-     
+    const { popularDishes } = useSelector(popularDishesRetriever);
     console.log("popularDishes:", popularDishes);
- 
     return (
         <div className="popular-dishes-frame">
             <Container>
                 <Stack className="popular-section">
-                    <Box className="category-title">Popular Dishes</Box>
+                    <Box className="category-title">
+                       OUR <span className="popular-product">PRODUCTS</span>
+                    </Box>
                     <Stack className="cards-frame">
                         {popularDishes.length !== 0?  (
                             popularDishes.map((product: Product) => {

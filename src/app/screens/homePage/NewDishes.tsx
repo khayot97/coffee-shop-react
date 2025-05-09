@@ -28,7 +28,9 @@ export default function NewDishes() {
         <div className="new-products-frame">
             <Container>
                 <Stack className="main">
-                    <Box className="category-title">Fresh Menu</Box>
+                    <Box className="category-title">
+                    OUR <span className="newdishes">MENU</span>
+                    </Box>
                     <Stack className="cards-frame">
                         <CssVarsProvider>
                             {newDishes.length !== 0 ? (
@@ -41,7 +43,6 @@ export default function NewDishes() {
                                     return (
                                         <Card key={product._id} variant="outlined" className="card">
                                             <CardOverflow>
-                                            ? product.productVolume + "l"
                                                 <div className="product-sale">{sizeVolume}</div>
                                                 <AspectRatio ratio="1">
                                                     <img src={imagePath} alt="" />
