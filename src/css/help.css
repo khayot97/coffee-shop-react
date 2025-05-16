@@ -2,7 +2,7 @@
   width: 100%;
   height: auto;
   display: flex;
-  background: #f8f8ff;
+  background: #010103;
 }
 
 .help-page .help-container {
@@ -17,12 +17,13 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border-bottom: 1px solid #f8f8ff;
+  border-bottom: 1px solid #d7b686;
 }
 
 .help-page .help-menu .table-list {
   display: flex;
   justify-content: space-between;
+  color: #d7b686;;
 }
 
 .help-page .css-1gsv261 {
@@ -50,7 +51,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #f8f8ff;
+  background:white;
   border: 1px solid #ededed;
   box-shadow: 0px 20px 30px rgba(25, 25, 46, 0.04);
   border-radius: 8px;
@@ -64,7 +65,7 @@
 }
 
 .rules-box .rules-frame p {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #725f5f;
   color: #000000;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
@@ -87,7 +88,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #f8f8ff;
+  background: white;
   border: 1px solid #ededed;
   box-shadow: 0px 20px 30px rgba(25, 25, 46, 0.04);
   border-radius: 8px;

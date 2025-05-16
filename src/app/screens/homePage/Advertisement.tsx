@@ -14,7 +14,7 @@ export default function Advertisement() {
           muted
           playsInline
         >
-          <source type="video/mp4" src="video/burak-ads.mp4" />
+          <source type="video/mp4" src="video/coffee-shop.mp4" />
         </video>
       </div>
     </div>

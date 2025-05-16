@@ -40,7 +40,7 @@ export default function Products(props: ProductsProps) {
         page: 1,
         limit: 8,
         order: "createdAt",
-        productCollection: ProductCollection.DISH,
+        productCollection: ProductCollection.COFFEE,
         search: "",
     });
 
@@ -97,7 +97,8 @@ const chooseDishHandler = (id: string) => {
                     <Stack flexDirection={"column"} alignItems={"center"}>
                         <Stack className={"avatar-big-box"}>
                         <Stack className={"top-text"}>
-                            <p>Burak Restaurant</p>
+                            <p className={"top-text-menu"}>MENU</p>
+                            <p className={"top-text-us"}>US</p>
                             <Stack className={"single-search-big-box"}>
                             <input
                                 type={"search"}
@@ -162,67 +163,67 @@ const chooseDishHandler = (id: string) => {
                         <Button 
                             variant={"contained"}
                             color={
-                                productSearch.productCollection === ProductCollection.OTHER
+                                productSearch.productCollection === ProductCollection.BITES
                                     ? "primary"
                                     : "secondary"
                             } 
                             onClick={() => 
-                                searchCollectionHandler(ProductCollection.OTHER)
+                                searchCollectionHandler(ProductCollection.BITES)
                             }
                         >
-                            Other
+                            Bites
                         </Button>
                         <Button 
                             variant={"contained"}
                             color={
-                                productSearch.productCollection === ProductCollection.DESSERT
+                                productSearch.productCollection === ProductCollection.ICED
                                     ? "primary"
                                     : "secondary"
                             } 
                             onClick={() => 
-                                searchCollectionHandler(ProductCollection.DESSERT)
+                                searchCollectionHandler(ProductCollection.ICED)
                             }
                         >
-                            Dessert
+                            Iced
                         </Button>
                         <Button 
                             variant={"contained"}
                             color={
-                                productSearch.productCollection === ProductCollection.DRINK
+                                productSearch.productCollection === ProductCollection.PASTRIES
                                     ? "primary"
                                     : "secondary"
                             } 
                             onClick={() => 
-                                searchCollectionHandler(ProductCollection.DRINK)
+                                searchCollectionHandler(ProductCollection.PASTRIES)
                             }
                         >
-                            Drink
+                            Pastries
                         </Button>
                         <Button 
                             variant={"contained"}
                             color={
-                                productSearch.productCollection === ProductCollection.SALAD
+                                productSearch.productCollection === ProductCollection.TEA
                                     ? "primary"
                                     : "secondary"
                             } 
                             onClick={() => 
-                                searchCollectionHandler(ProductCollection.SALAD)
+                                searchCollectionHandler(ProductCollection.TEA)
                             }
                         >
-                            Salad
+                            Tea
                         </Button>
                         <Button 
                             variant={"contained"}
                             color={
-                                productSearch.productCollection === ProductCollection.DISH
+                                productSearch.productCollection === ProductCollection.COFFEE
                                     ? "primary"
                                     : "secondary"
                             }   
                             onClick={() => 
-                                searchCollectionHandler(ProductCollection.DISH)
+                                searchCollectionHandler(ProductCollection.COFFEE)
                             }
                         >
-                            Dish
+                            Coffee
                         </Button>
                         </div>
                     </Stack>
@@ -231,8 +232,10 @@ const chooseDishHandler = (id: string) => {
                         products.map((product: Product) => {
                             const imagePath = `${serverApi}/${product.productImages[0]}`;
                             const sizeVolume = 
-                                product.productCollection === ProductCollection.DRINK
-                                    ? product.productVolume + " litre"
+                                product.productCollection === ProductCollection.COFFEE ||
+                                product.productCollection === ProductCollection.TEA ||
+                                product.productCollection === ProductCollection.ICED
+                                    ? product.productVolume + "ml"
                                     : product.productSize + " size";
                             return (
                                 <Stack 
@@ -322,19 +325,21 @@ const chooseDishHandler = (id: string) => {
                 </Container>
                 <div className={"brands-logo"}>
                 <Container className={"family-brands"}>
-                    <Box className={"category-title"}>Our Family Brands</Box>
+                    <Box className={"category-title"}> 
+                    OUR <span className="category-title-text">FAMILY BRANDS</span>
+                    </Box>
                     <Stack className={"brand-list"}>
                     <Box className={"review-box"}>
-                        <img src={"/img/gurme.webp"} />
+                        <img src={"/img/gurme1.webp"} />
                     </Box>
                     <Box className={"review-box"}>
-                        <img src={"/img/gurme.webp"} />
+                        <img src={"/img/gurme2.webp"} />
                     </Box>
                     <Box className={"review-box"}>
-                        <img src={"/img/gurme.webp"} />
+                        <img src={"/img/gurme3.webp"} />
                     </Box>
                     <Box className={"review-box"}>
-                        <img src={"/img/gurme.webp"} />
+                        <img src={"/img/gurme4.webp"} />
                     </Box>
                     </Stack>
                 </Container>
@@ -343,7 +348,9 @@ const chooseDishHandler = (id: string) => {
                 <div className={"address"}>
                 <Container>
                     <Stack className={"address-area"}>
-                    <Box className={"title"}>Our address</Box>
+                    <Box className={"title"}>
+                    OUR <span className="title-address-text">ADDRESS</span>
+                    </Box>
                     <iframe
                         style={{ marginTop: "60px" }}
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.363734762081!2d69.2267250514616!3d41.322703307863044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b9a0a33281d%3A0x9c5015eab678e435!2z0KDQsNC50YXQvtC9!5e0!3m2!1sko!2skr!4v1655461169573!5m2!1sko!2skr"
@@ -357,11 +364,3 @@ const chooseDishHandler = (id: string) => {
         </div>
     );
 };
-
-function useHsitory() {
-    throw new Error("Function not implemented.");
-}
-// function actionDispatch(arg0: (action: T) => T): { setProducts: any; } {
-//     throw new Error("Function not implemented.");
-// }
-

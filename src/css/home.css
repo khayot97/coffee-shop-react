@@ -458,8 +458,8 @@
     width: 90%;
     height: auto;
     bottom: 5px;
-    background: #f8f8ff;
-    box-shadow: 0px 40px 30px rgba(25, 25, 46, 0.04);
+    background: linear-gradient(rgba(248, 248, 255, 0.6), rgba(248, 248, 255, 0.6));
+    box-shadow: 0px 40px 30px rgba(5, 5, 12, 0.04);
     border-radius: 8px;
 }
 
@@ -509,7 +509,7 @@
     font-weight: 400;
     font-size: 17px;
     line-height: 26px;
-    color: #4f547b;
+    color: #03020e;
 }
 
 .homepage .events-frame .bott-left .bott-info {
@@ -533,7 +533,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
-    color: #4f547b;
+    color: #40466d;
 }
 
 .homepage .events-frame .bott-info .bott-info-main img {
@@ -556,7 +556,7 @@
 }
 
 .homepage .events-frame .swiper-pagination-bullet-active {
-    background: #343434;
+    background: #312d2d;
     border-radius: 50%;
 }
 /* STOPING =>  EVENTS*/

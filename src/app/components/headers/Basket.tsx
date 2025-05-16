@@ -177,7 +177,5 @@ export default function Basket(props: BasketProps) {
     </Box>
   );
 }
-function setOrderBuilder(arg0: Date) {
-  throw new Error("Function not implemented.");
-}
+
 

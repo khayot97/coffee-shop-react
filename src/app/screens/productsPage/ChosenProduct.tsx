@@ -75,7 +75,9 @@ export default function ChosenProduct(props: ChosenProductProps) {
   if (!chosenProduct) return null;
   return (
     <div className={"chosen-product"}>
-      <Box className={"title"}>Product Detail</Box>
+      <Box className={"title"}>
+        PRODUCT <span className="title-text">DETAIL</span>
+      </Box>
       <Container className={"product-container"}>
         <Stack className={"chosen-product-slider"}>
           <Swiper

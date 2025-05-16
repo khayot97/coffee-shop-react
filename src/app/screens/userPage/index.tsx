@@ -21,7 +21,9 @@ export default function UserPage() {
         <Stack className={"my-page-frame"}>
           <Stack className={"my-page-left"}>
             <Box display={"flex"} flexDirection={"column"}>
-              <Box className={"menu-name"}>Modify Member Details</Box>
+              <Box className={"menu-name"}>
+               MODIFY <span className="user-page-text"> MEMBER DETAILS</span>
+              </Box>
               <Box className={"menu-content"}>
                 <Settings />
               </Box>

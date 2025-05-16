@@ -84,7 +84,6 @@ export default function AuthenticationModal(props: AuthenticationModalProps) {
           };
           const member = new MemberService(),
             result = await member.signup(signupInput);
-            // TODO:  Saving Authenticated user
           setAuthMember(result);
           handleSignupClose();
         } catch (err) {
@@ -105,7 +104,6 @@ export default function AuthenticationModal(props: AuthenticationModalProps) {
         };
         const member = new MemberService(),
           result = await member.login(loginInput);
-         // TODO:  Saving Authenticated user
         setAuthMember(result);
         handleLoginClose();
       } catch (err) {
@@ -189,7 +187,9 @@ export default function AuthenticationModal(props: AuthenticationModalProps) {
           <Stack
             className={classes.paper}
             direction={"row"}
-            sx={{ width: "700px" }}
+            sx={{
+              width: "700px", 
+            }}
           >
             <ModalImg src={"/img/auth.webp"} alt="camera" />
             <Stack
@@ -231,7 +231,5 @@ export default function AuthenticationModal(props: AuthenticationModalProps) {
     </div>
   );
 }
-function handleSignupRequest() {
-  throw new Error("Function not implemented.");
-}
+
 

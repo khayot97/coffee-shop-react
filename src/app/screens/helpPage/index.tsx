@@ -54,7 +54,7 @@ export default function HelpPage() {
                 <Stack className={"accordion-menu"}>
                   {faq.map((value, number) => {
                     return (
-                      <Accordion key={number}>
+                      <Accordion key={number} sx={{ backgroundColor: "white" }}>
                         <AccordionSummary
                           expandIcon={<ExpandMoreIcon />}
                           aria-controls="panel1a-content"
