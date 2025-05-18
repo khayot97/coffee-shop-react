@@ -194,7 +194,7 @@
     align-items: center;
     justify-content: center;
     background: #ff9200;
-    box-shadow: 4px 6px 20px #0000001a;
+    box-shadow: 4px 6px 20px #17311b1a;
     border-radius: 25px;
     font-family: "Poppins";
     font-style: normal;
@@ -219,6 +219,7 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 30px;
+    color: white;
 }
 
 .products-page .products .product-desc .product-desc {
@@ -276,7 +277,7 @@
     z-index: 3;
     opacity: 0;
     transition: opacity 0.5s ease;
-    background: rgb(198 0 255 / 66%);
+    background: rgba(148, 112, 14, 0.89);
     border: 2px solid #d7b686;
     border-radius: 10px;
     font-family: "Poppins";
